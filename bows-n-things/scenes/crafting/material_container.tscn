@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dq3rnywjr8d3c"]
+
+[ext_resource type="Script" uid="uid://cgcq5x7qqal3w" path="res://scripts/crafting/material_container.gd" id="1_gosxi"]
+[ext_resource type="Texture2D" uid="uid://ed4tssgekr6c" path="res://assets/crafting/basic_selfbow.png" id="1_kipk6"]
+
+[node name="MaterialContainer" type="VBoxContainer" unique_id=2099325900]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_gosxi")
+
+[node name="MaterialTexture" type="TextureRect" parent="." unique_id=1017950894]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("1_kipk6")

@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://c3eqmwuwvrsv4"]
+
+[ext_resource type="Script" uid="uid://bxxpntp7ty5lm" path="res://scripts/crafting/crafting_ui.gd" id="1_hjh62"]
+[ext_resource type="Theme" uid="uid://xljef71yn2pm" path="res://crafting_theme.tres" id="1_hyyb4"]
+[ext_resource type="Texture2D" uid="uid://ed4tssgekr6c" path="res://assets/crafting/basic_selfbow.png" id="1_pbk60"]
+[ext_resource type="Script" uid="uid://ddbakqvjwrh5y" path="res://scripts/crafting/item_designs.gd" id="2_uafpn"]
+[ext_resource type="Resource" uid="uid://b0m47fntu7e10" path="res://Resources/designs/basic_selfbow_unstrung_design.tres" id="3_ewaj8"]
+[ext_resource type="Resource" uid="uid://b6r8vgdbefalr" path="res://Resources/designs/basic_selfbow_design.tres" id="3_wmp3u"]
+[ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="4_wmp3u"]
+[ext_resource type="Resource" uid="uid://csbdflu8nv5y" path="res://Resources/items/basic_selfbow_unstrung.tres" id="5_hyyb4"]
+[ext_resource type="Resource" uid="uid://b6llirehgvdks" path="res://Resources/designs/bowstring_design.tres" id="5_paiq3"]
+[ext_resource type="Resource" uid="uid://ctw2ispk46ro3" path="res://Resources/items/bowstring.tres" id="6_paiq3"]
+[ext_resource type="Resource" uid="uid://b0oo2icyxbgon" path="res://Resources/items/flax_twine.tres" id="7_fnpwn"]
+[ext_resource type="Resource" uid="uid://bqyt32qepgu8h" path="res://Resources/items/wood.tres" id="8_gvsk6"]
+[ext_resource type="Texture2D" uid="uid://bq82jj78sh5xk" path="res://assets/ui/TravelBook_Spritesheet_v1.png" id="13_paiq3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hyyb4"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paiq3"]
+atlas = SubResource("CompressedTexture2D_hyyb4")
+region = Rect2(64, 464, 64, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fnpwn"]
+texture = SubResource("AtlasTexture_paiq3")
+texture_margin_left = 3.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnpwn"]
+atlas = ExtResource("13_paiq3")
+region = Rect2(64, 208, 224, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gvsk6"]
+texture = SubResource("AtlasTexture_fnpwn")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v27fj"]
+atlas = ExtResource("13_paiq3")
+region = Rect2(256, 688, 16, 16)
+
+[node name="CraftingUI" type="PanelContainer" unique_id=432970399]
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -116.0
+offset_right = 212.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hyyb4")
+script = ExtResource("1_hjh62")
+design_array = Array[ExtResource("2_uafpn")]([ExtResource("3_wmp3u"), ExtResource("3_ewaj8"), ExtResource("5_paiq3")])
+design_material_array = Array[ExtResource("4_wmp3u")]([ExtResource("5_hyyb4"), ExtResource("6_paiq3"), ExtResource("7_fnpwn"), ExtResource("8_gvsk6")])
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=439244588]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=18158133]
+layout_mode = 2
+theme = ExtResource("1_hyyb4")
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1717156749]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fnpwn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/PanelContainer" unique_id=54441733]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/PanelContainer/VBoxContainer" unique_id=1938836408]
+layout_mode = 2
+text = "DESIGNS"
+horizontal_alignment = 1
+
+[node name="Tree" type="Tree" parent="MarginContainer/HBoxContainer/PanelContainer/VBoxContainer" unique_id=2092899149]
+clip_contents = false
+custom_minimum_size = Vector2(144, 128)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_hyyb4")
+allow_search = false
+enable_recursive_folding = false
+enable_drag_unfolding = false
+auto_tooltip = false
+scroll_horizontal_enabled = false
+scroll_vertical_enabled = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=399578742]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1466591863]
+layout_mode = 2
+theme = ExtResource("1_hyyb4")
+text = "gay gay gay gay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemTexture" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=265696240]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = ExtResource("1_hyyb4")
+texture = ExtResource("1_pbk60")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1505721070]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MaterialContainer1" type="PanelContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1322082969]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_hyyb4")
+theme_override_styles/panel = SubResource("StyleBoxTexture_gvsk6")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer1" unique_id=1819189970]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer1/MarginContainer" unique_id=851785800]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MaterialTexture1" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer1/MarginContainer/HBoxContainer" unique_id=2050792713]
+texture_filter = 1
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("1_pbk60")
+
+[node name="MaterialName1" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer1/MarginContainer/HBoxContainer" unique_id=1953142384]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Basic Selfbow [Unstrung]"
+vertical_alignment = 1
+
+[node name="MaterialAmount" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer1/MarginContainer/HBoxContainer" unique_id=1450509810]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "x1"
+vertical_alignment = 1
+
+[node name="MaterialContainer2" type="PanelContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1861182047]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_hyyb4")
+theme_override_styles/panel = SubResource("StyleBoxTexture_gvsk6")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer2" unique_id=218001208]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer2/MarginContainer" unique_id=923788115]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MaterialTexture2" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer2/MarginContainer/HBoxContainer" unique_id=911130961]
+texture_filter = 1
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("1_pbk60")
+
+[node name="MaterialName2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer2/MarginContainer/HBoxContainer" unique_id=199051257]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Basic Selfbow [Unstrung]"
+vertical_alignment = 1
+
+[node name="MaterialAmount" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/MaterialContainer2/MarginContainer/HBoxContainer" unique_id=417047651]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "x1"
+vertical_alignment = 1
+
+[node name="CraftButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1546538901]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = ExtResource("1_hyyb4")
+text = "CRAFT"
+
+[node name="ExitButton" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=1419446105]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_v27fj")
+
+[connection signal="cell_selected" from="MarginContainer/HBoxContainer/PanelContainer/VBoxContainer/Tree" to="." method="_on_tree_cell_selected"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/ExitButton" to="." method="_on_exit_button_button_down"]

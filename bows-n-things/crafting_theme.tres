@@ -1,0 +1,106 @@
+[gd_resource type="Theme" format=3 uid="uid://xljef71yn2pm"]
+
+[ext_resource type="Texture2D" uid="uid://bq82jj78sh5xk" path="res://assets/ui/TravelBook_Spritesheet_v1.png" id="1_hf5pd"]
+[ext_resource type="FontFile" uid="uid://crupvxljx1n7i" path="res://assets/ui/VCR_OSD_MONO_1.001.ttf" id="2_6lv1b"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a3avu"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k84k4"]
+atlas = SubResource("CompressedTexture2D_a3avu")
+region = Rect2(64, 432, 64, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8qcoy"]
+texture = SubResource("AtlasTexture_k84k4")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(1, 1, 62, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lv1b"]
+atlas = ExtResource("1_hf5pd")
+region = Rect2(64, 448, 64, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_psqgn"]
+texture = SubResource("AtlasTexture_6lv1b")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(1, 1, 62, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iilqe"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qcoy"]
+atlas = SubResource("CompressedTexture2D_iilqe")
+region = Rect2(64, 448, 64, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6o7ld"]
+texture = SubResource("AtlasTexture_8qcoy")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(1, 1, 62, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paiq3"]
+atlas = ExtResource("1_hf5pd")
+region = Rect2(64, 32, 224, 160)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fnpwn"]
+texture = SubResource("AtlasTexture_paiq3")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6lv1b"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psqgn"]
+atlas = SubResource("CompressedTexture2D_6lv1b")
+region = Rect2(64, 384, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a3avu"]
+texture = SubResource("AtlasTexture_psqgn")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_psqgn"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3avu"]
+atlas = SubResource("CompressedTexture2D_psqgn")
+region = Rect2(64, 384, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iilqe"]
+texture = SubResource("AtlasTexture_a3avu")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_psqgn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6lv1b"]
+
+[resource]
+Button/constants/outline_size = 3
+Button/fonts/font = ExtResource("2_6lv1b")
+Button/styles/hover = SubResource("StyleBoxTexture_8qcoy")
+Button/styles/normal = SubResource("StyleBoxTexture_psqgn")
+Button/styles/pressed = SubResource("StyleBoxTexture_6o7ld")
+Label/constants/outline_size = 4
+Label/fonts/font = ExtResource("2_6lv1b")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_fnpwn")
+Tree/colors/font_color = Color(0.24115604, 0.24115604, 0.24115604, 1)
+Tree/colors/font_hovered_color = Color(0.43771297, 0.43266988, 0.44567043, 1)
+Tree/constants/button_margin = 32
+Tree/constants/icon_max_width = 16
+Tree/constants/item_margin = 0
+Tree/font_sizes/font_size = 6
+Tree/fonts/font = ExtResource("2_6lv1b")
+Tree/styles/hovered = SubResource("StyleBoxTexture_a3avu")
+Tree/styles/hovered_selected = SubResource("StyleBoxTexture_iilqe")
+Tree/styles/panel = SubResource("StyleBoxEmpty_psqgn")
+Tree/styles/selected = SubResource("StyleBoxEmpty_6lv1b")

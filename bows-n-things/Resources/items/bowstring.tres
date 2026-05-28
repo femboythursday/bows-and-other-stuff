@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ctw2ispk46ro3"]
+
+[ext_resource type="Texture2D" uid="uid://qyrk4282bukl" path="res://assets/crafting/bowstring.png" id="1_80r3o"]
+[ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="2_80r3o"]
+
+[resource]
+resource_name = "bowstring"
+script = ExtResource("2_80r3o")
+name = "Bowstring"
+icon = ExtResource("1_80r3o")
+metadata/_custom_type_script = "uid://byhnrhmcgdvhr"

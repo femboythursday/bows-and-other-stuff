@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b0oo2icyxbgon"]
+
+[ext_resource type="Texture2D" uid="uid://dl6oub7s6aido" path="res://assets/crafting/fb1499.png" id="1_pn7me"]
+[ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="2_pn7me"]
+
+[resource]
+resource_name = "flax twine"
+script = ExtResource("2_pn7me")
+name = "Flax Twine"
+icon = ExtResource("1_pn7me")
+metadata/_custom_type_script = "uid://byhnrhmcgdvhr"

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://fhsxhhcf10h1"]
+
+[ext_resource type="Script" uid="uid://dgln87byqx8jy" path="res://scripts/crafting/workbench.gd" id="1_mt5gl"]
+[ext_resource type="Texture2D" uid="uid://be437n1keu1gs" path="res://assets/atlas_16x.png" id="1_qfxdc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mt5gl"]
+size = Vector2(42, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojnj7"]
+atlas = ExtResource("1_qfxdc")
+region = Rect2(192, 72, 48, 32)
+
+[node name="Workbench" type="Area2D" unique_id=338832564]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_mt5gl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1512097227]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_mt5gl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1292471483]
+texture_filter = 1
+texture = SubResource("AtlasTexture_ojnj7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDesign" format=3 uid="uid://b0m47fntu7e10"]
+
+[ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="1_n7xxq"]
+[ext_resource type="Script" uid="uid://ddbakqvjwrh5y" path="res://scripts/crafting/item_designs.gd" id="2_mg4fm"]
+[ext_resource type="Resource" uid="uid://bqyt32qepgu8h" path="res://Resources/items/wood.tres" id="2_yd0hb"]
+[ext_resource type="Resource" uid="uid://csbdflu8nv5y" path="res://Resources/items/basic_selfbow_unstrung.tres" id="3_caklj"]
+
+[resource]
+script = ExtResource("2_mg4fm")
+design_name = "Basic Selfbow (Unstrung)"
+design_product = ExtResource("3_caklj")
+design_material_array = Array[ExtResource("1_n7xxq")]([ExtResource("2_yd0hb")])
+metadata/_custom_type_script = "uid://ddbakqvjwrh5y"

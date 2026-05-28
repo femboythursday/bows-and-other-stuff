@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://csbdflu8nv5y"]
+
+[ext_resource type="Texture2D" uid="uid://ckt517bx2wbxa" path="res://assets/crafting/basic_selfbow_unstrung-16xt.png" id="1_da3gc"]
+[ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="2_da3gc"]
+
+[resource]
+resource_name = "basic selfbow unstrung"
+script = ExtResource("2_da3gc")
+name = "Basic Selfbow Unstrung"
+icon = ExtResource("1_da3gc")
+metadata/_custom_type_script = "uid://byhnrhmcgdvhr"

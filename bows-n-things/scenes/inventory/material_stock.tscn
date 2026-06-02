@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qyrk4282bukl" path="res://assets/crafting/bowstring.png" id="2_gpgt2"]
 [ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="3_d1bkn"]
 [ext_resource type="Texture2D" uid="uid://bq82jj78sh5xk" path="res://assets/ui/TravelBook_Spritesheet_v1.png" id="4_1cbtd"]
-[ext_resource type="Theme" uid="uid://xljef71yn2pm" path="res://crafting_theme.tres" id="5_6w05g"]
+[ext_resource type="Theme" uid="uid://xljef71yn2pm" path="res://resources/themes_tilesets/crafting_theme.tres" id="5_6w05g"]
 [ext_resource type="Texture2D" uid="uid://ttx63qprgd0x" path="res://assets/crafting/wood_16x.png" id="6_wnxg1"]
 
 [sub_resource type="Resource" id="Resource_1cbtd"]

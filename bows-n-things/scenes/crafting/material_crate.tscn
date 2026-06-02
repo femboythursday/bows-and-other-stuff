@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cqow5dwxoxc5i" path="res://scripts/crafting/material_crate.gd" id="1_oh2eb"]
 [ext_resource type="Texture2D" uid="uid://bq82jj78sh5xk" path="res://assets/ui/TravelBook_Spritesheet_v1.png" id="4_hov4t"]
-[ext_resource type="Theme" uid="uid://xljef71yn2pm" path="res://crafting_theme.tres" id="5_sp14s"]
+[ext_resource type="Theme" uid="uid://xljef71yn2pm" path="res://resources/themes_tilesets/crafting_theme.tres" id="5_sp14s"]
 [ext_resource type="Texture2D" uid="uid://ttx63qprgd0x" path="res://assets/crafting/wood_16x.png" id="6_tg7yf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cgx4"]

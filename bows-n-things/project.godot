@@ -18,19 +18,23 @@ config/icon="res://icon.svg"
 [autoload]
 
 Autoload="*uid://b63k08mx4n4kg"
+SaveManager="*uid://dc53t7txv8nno"
+PlayerManager="*uid://e5v2lus8y7xh"
+SceneManager="*uid://ti0jnsscnaqs"
+PauseMenu="*uid://7gaxuukus5v6"
+QuestManager="*uid://d1hcqgecijbm1"
 
 [display]
 
-window/size/viewport_width=480
-window/size/viewport_height=270
-window/size/initial_position_type=3
+window/size/viewport_width=640
+window/size/viewport_height=380
 window/stretch/mode="canvas_items"
 
 [file_customization]
 
 folder_colors={
-"res://Resources/": "teal",
 "res://assets/": "purple",
+"res://resources/": "teal",
 "res://scenes/": "pink",
 "res://scripts/": "blue"
 }
@@ -74,6 +78,16 @@ scroll_down={
 scroll_up={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":4,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+pause={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+test={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":92,"key_label":0,"unicode":92,"location":0,"echo":false,"script":null)
 ]
 }
 

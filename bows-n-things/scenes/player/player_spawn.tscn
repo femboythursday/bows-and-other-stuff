@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b03mv55ej1m5c"]
+
+[ext_resource type="Script" uid="uid://cxxmlprcsly6d" path="res://scripts/player/player_spawn.gd" id="1_2o76q"]
+[ext_resource type="Texture2D" uid="uid://b51xq3aqw7j6y" path="res://assets/sivan_spritesheet_v1.5.png" id="2_2f3ni"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2u58"]
+atlas = ExtResource("2_2f3ni")
+region = Rect2(8, 0, 32, 32)
+
+[node name="PlayerSpawn" type="Node2D" unique_id=920644245]
+script = ExtResource("1_2o76q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1235140182]
+modulate = Color(0.3998427, 0.58802634, 0.27055287, 1)
+position = Vector2(0, -16)
+texture = SubResource("AtlasTexture_l2u58")

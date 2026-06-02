@@ -45,7 +45,7 @@ func _on_tree_cell_selected() -> void:
 func build_design_material_window(selected_design: ItemDesign) -> void:
 	title_label.text = selected_design.design_product.name
 	item_texture.texture = selected_design.design_product.icon
-	print("Selected design: ", selected_design.design_name, ". Materials: ", selected_design.design_material_array)
+	#print("Selected design: ", selected_design.design_name, ". Materials: ", selected_design.design_material_array)
 
 	if selected_design.design_material_array.size() == 2:
 		material_container_2.show()
@@ -58,8 +58,8 @@ func build_design_material_window(selected_design: ItemDesign) -> void:
 		material_texture_1.texture = selected_design.design_material_array[0].icon
 		material_name_1.text = selected_design.design_material_array[0].name
 	
-	print("Player needs: ",selected_design.design_material_array)
-	print("Player has: ",player_inv.slots)
+	#print("Player needs: ",selected_design.design_material_array)
+	#print("Player has: ",player_inv.slots)
 	if player_inv.slots.has(selected_design.design_material_array):
 		print("gay")
 	else:
@@ -67,7 +67,7 @@ func build_design_material_window(selected_design: ItemDesign) -> void:
 	#check_design_craftable()
 
 func check_design_craftable() -> void:
-	print(selected_design.design_material_array)
+	#print(selected_design.design_material_array)
 	if player_inv.slots.has(selected_design.design_material_array[0]):
 		print("gay")
 	else:

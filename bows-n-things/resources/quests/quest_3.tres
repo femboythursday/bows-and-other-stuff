@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://dlvo7d85bm1ec"]
+
+[ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="1_6xpk3"]
+[ext_resource type="Resource" uid="uid://b5tv74gxeu305" path="res://resources/items/basic_selfbow.tres" id="2_72prn"]
+[ext_resource type="Script" uid="uid://d0w723y4k1g07" path="res://scripts/quests/quest.gd" id="3_is1pp"]
+
+[resource]
+script = ExtResource("3_is1pp")
+id = 3
+title = "xyz"
+description = "fgjfdjfdgjfdgjfgfgjjfgfg"
+time_limit_days = 3
+requirements = Array[ExtResource("1_6xpk3")]([ExtResource("2_72prn")])
+reward_gold = 50
+metadata/_custom_type_script = "uid://d0w723y4k1g07"

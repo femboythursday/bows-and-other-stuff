@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d4irl44x0cvio"]
+
+[ext_resource type="Script" uid="uid://bhevpuqej7ae8" path="res://scripts/quests/quest_container.gd" id="1_soxxk"]
+[ext_resource type="PackedScene" uid="uid://bcq8on4a6geuk" path="res://scenes/quests/quest_box.tscn" id="2_yaahy"]
+
+[node name="QuestContainer" type="VBoxContainer" unique_id=1821955302]
+z_index = 5
+z_as_relative = false
+y_sort_enabled = true
+offset_right = 79.0
+offset_bottom = 26.0
+script = ExtResource("1_soxxk")
+
+[node name="QuestBox" parent="." unique_id=1048466330 instance=ExtResource("2_yaahy")]
+layout_mode = 2

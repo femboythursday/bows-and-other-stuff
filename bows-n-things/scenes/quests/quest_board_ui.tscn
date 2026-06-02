@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://o6intiljbr0m"]
+
+[ext_resource type="Theme" uid="uid://xljef71yn2pm" path="res://resources/themes_tilesets/crafting_theme.tres" id="1_msdjg"]
+[ext_resource type="Script" uid="uid://ca3qsdyy31tqk" path="res://scripts/quests/quest_board_ui.gd" id="2_aecdn"]
+[ext_resource type="Texture2D" uid="uid://bq82jj78sh5xk" path="res://assets/ui/TravelBook_Spritesheet_v1.png" id="2_oeayb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fmk2"]
+atlas = ExtResource("2_oeayb")
+region = Rect2(304, 32, 104, 152)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ng7k2"]
+texture = SubResource("AtlasTexture_1fmk2")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_msdjg"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeayb"]
+atlas = SubResource("CompressedTexture2D_msdjg")
+region = Rect2(432, 32, 104, 152)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1fmk2"]
+texture = SubResource("AtlasTexture_oeayb")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msdjg"]
+bg_color = Color(0.64705884, 0.5176471, 0.8901961, 0.5411765)
+
+[node name="QuestBoardUI" type="PanelContainer" unique_id=1615386399]
+z_index = 5
+z_as_relative = false
+y_sort_enabled = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_msdjg")
+script = ExtResource("2_aecdn")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=456733852]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+
+[node name="Pages" type="HBoxContainer" parent="MarginContainer" unique_id=1010960666]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Panel" type="Panel" parent="MarginContainer/Pages" unique_id=67474545]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_ng7k2")
+
+[node name="Panel2" type="Panel" parent="MarginContainer/Pages" unique_id=182546920]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_1fmk2")
+
+[node name="Quests" type="GridContainer" parent="MarginContainer" unique_id=1183172343]
+layout_mode = 2
+columns = 2
+
+[node name="QuestContainer" type="MarginContainer" parent="MarginContainer/Quests" unique_id=1209641962]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Quests/QuestContainer" unique_id=149170971]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_msdjg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Quests/QuestContainer/PanelContainer" unique_id=759884793]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="QuestTitle" type="Label" parent="MarginContainer/Quests/QuestContainer/PanelContainer/VBoxContainer" unique_id=366676555]
+layout_mode = 2
+text = "I need a bow!"
+
+[node name="QuestDescription" type="Label" parent="MarginContainer/Quests/QuestContainer/PanelContainer/VBoxContainer" unique_id=837847034]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 12
+text = "NAME requests a Basic Selfbow 
+for xyz."
+
+[node name="AcceptButton1" type="Button" parent="MarginContainer/Quests/QuestContainer/PanelContainer/VBoxContainer" unique_id=1689838031]
+layout_mode = 2
+text = "Accept"
+
+[node name="SimpleQuest2" type="MarginContainer" parent="MarginContainer/Quests" unique_id=1414485664]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Quests/SimpleQuest2" unique_id=1965117401]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_msdjg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Quests/SimpleQuest2/PanelContainer" unique_id=524200047]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="QuestTitle" type="Label" parent="MarginContainer/Quests/SimpleQuest2/PanelContainer/VBoxContainer" unique_id=829484338]
+layout_mode = 2
+text = "I need a bow!"
+
+[node name="QuestDescription" type="Label" parent="MarginContainer/Quests/SimpleQuest2/PanelContainer/VBoxContainer" unique_id=942977255]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 12
+text = "NAME requests a Basic Selfbow 
+for xyz."
+
+[node name="AcceptButton1" type="Button" parent="MarginContainer/Quests/SimpleQuest2/PanelContainer/VBoxContainer" unique_id=1786416414]
+layout_mode = 2
+text = "Accept"
+
+[node name="SimpleQuest3" type="MarginContainer" parent="MarginContainer/Quests" unique_id=472851089]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Quests/SimpleQuest3" unique_id=902263272]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_msdjg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Quests/SimpleQuest3/PanelContainer" unique_id=1980508369]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="QuestTitle" type="Label" parent="MarginContainer/Quests/SimpleQuest3/PanelContainer/VBoxContainer" unique_id=501945619]
+layout_mode = 2
+text = "I need a bow!"
+
+[node name="QuestDescription" type="Label" parent="MarginContainer/Quests/SimpleQuest3/PanelContainer/VBoxContainer" unique_id=66968679]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 12
+text = "NAME requests a Basic Selfbow 
+for xyz."
+
+[node name="AcceptButton1" type="Button" parent="MarginContainer/Quests/SimpleQuest3/PanelContainer/VBoxContainer" unique_id=267833888]
+layout_mode = 2
+text = "Accept"
+
+[node name="NoQuest" type="MarginContainer" parent="MarginContainer/Quests" unique_id=1178359921]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Quests/NoQuest" unique_id=1718628375]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_msdjg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Quests/NoQuest/PanelContainer" unique_id=169443615]
+layout_mode = 2
+
+[node name="QuestTitle" type="Label" parent="MarginContainer/Quests/NoQuest/PanelContainer/VBoxContainer" unique_id=510496620]
+layout_mode = 2
+text = "No Quest"
+
+[node name="QuestDescription" type="Label" parent="MarginContainer/Quests/NoQuest/PanelContainer/VBoxContainer" unique_id=1845563317]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 12
+text = "There are no quests available 
+right now. Come back later."
+
+[node name="FinishedQuest" type="MarginContainer" parent="MarginContainer/Quests" unique_id=337723522]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Quests/FinishedQuest" unique_id=1365454700]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_msdjg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Quests/FinishedQuest/PanelContainer" unique_id=862586455]
+layout_mode = 2
+
+[node name="QuestTitle" type="Label" parent="MarginContainer/Quests/FinishedQuest/PanelContainer/VBoxContainer" unique_id=676058725]
+layout_mode = 2
+text = "Quest Completed"
+
+[node name="QuestDescription" type="Label" parent="MarginContainer/Quests/FinishedQuest/PanelContainer/VBoxContainer" unique_id=1956446607]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 12
+text = "The patron thanks you 
+graciously and leaves your 
+reward."
+
+[connection signal="pressed" from="MarginContainer/Quests/QuestContainer/PanelContainer/VBoxContainer/AcceptButton1" to="." method="_on_accept_button_1_pressed"]
+[connection signal="pressed" from="MarginContainer/Quests/SimpleQuest2/PanelContainer/VBoxContainer/AcceptButton1" to="." method="_on_accept_button_1_pressed"]
+[connection signal="pressed" from="MarginContainer/Quests/SimpleQuest3/PanelContainer/VBoxContainer/AcceptButton1" to="." method="_on_accept_button_1_pressed"]

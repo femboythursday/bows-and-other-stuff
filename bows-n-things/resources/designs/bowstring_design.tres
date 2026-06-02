@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDesign" format=3 uid="uid://b6llirehgvdks"]
+
+[ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="1_f7tk1"]
+[ext_resource type="Resource" uid="uid://b0oo2icyxbgon" path="res://resources/items/flax_twine.tres" id="2_m832b"]
+[ext_resource type="Resource" uid="uid://ctw2ispk46ro3" path="res://resources/items/bowstring.tres" id="3_12mst"]
+[ext_resource type="Script" uid="uid://ddbakqvjwrh5y" path="res://scripts/crafting/item_designs.gd" id="4_0604q"]
+
+[resource]
+script = ExtResource("4_0604q")
+design_name = "Bowstring"
+design_product = ExtResource("3_12mst")
+design_material_array = Array[ExtResource("1_f7tk1")]([ExtResource("2_m832b")])
+metadata/_custom_type_script = "uid://ddbakqvjwrh5y"

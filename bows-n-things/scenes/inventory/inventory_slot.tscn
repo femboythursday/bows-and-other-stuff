@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3by15kks6mww"]
 
 [ext_resource type="Texture2D" uid="uid://ed4tssgekr6c" path="res://assets/crafting/basic_selfbow.png" id="1_5agom"]
-[ext_resource type="Theme" uid="uid://bg4stgfm53oor" path="res://inventory_theme.tres" id="1_u6pog"]
+[ext_resource type="Theme" uid="uid://bg4stgfm53oor" path="res://resources/themes_tilesets/inventory_theme.tres" id="1_u6pog"]
 [ext_resource type="Script" uid="uid://b6ricpnntfkf8" path="res://scripts/inventory/inventory_slot_ui.gd" id="2_c7w7p"]
 
 [node name="InventorySlot" type="Button" unique_id=709244594]

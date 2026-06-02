@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://c0takg2pirtc4"]
+
+[ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="1_corsb"]
+[ext_resource type="Texture2D" uid="uid://ed4tssgekr6c" path="res://assets/crafting/basic_selfbow.png" id="2_fm25h"]
+[ext_resource type="Script" uid="uid://d0w723y4k1g07" path="res://scripts/quests/quest.gd" id="2_iq0je"]
+
+[sub_resource type="Resource" id="Resource_yjoji"]
+resource_name = "basic selfbow"
+script = ExtResource("1_corsb")
+name = "Basic Selfbow"
+icon = ExtResource("2_fm25h")
+item_type = null
+metadata/_custom_type_script = "uid://byhnrhmcgdvhr"
+
+[sub_resource type="Resource" id="Resource_0wk22"]
+resource_name = "basic selfbow"
+script = ExtResource("1_corsb")
+name = "Basic Selfbow"
+icon = ExtResource("2_fm25h")
+item_type = null
+metadata/_custom_type_script = "uid://byhnrhmcgdvhr"
+
+[sub_resource type="Resource" id="Resource_woceo"]
+resource_name = "basic selfbow"
+script = ExtResource("1_corsb")
+name = "Basic Selfbow"
+icon = ExtResource("2_fm25h")
+item_type = null
+metadata/_custom_type_script = "uid://byhnrhmcgdvhr"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ap8pp"]
+load_path = "res://.godot/imported/basic_selfbow.png-48c406c708551b6e02631cd057d21322.ctex"
+
+[sub_resource type="Resource" id="Resource_cte3a"]
+resource_name = "basic selfbow"
+script = ExtResource("1_corsb")
+name = "Basic Selfbow"
+icon = SubResource("CompressedTexture2D_ap8pp")
+item_type = null
+metadata/_custom_type_script = "uid://byhnrhmcgdvhr"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_30kgc"]
+load_path = "res://.godot/imported/basic_selfbow.png-48c406c708551b6e02631cd057d21322.ctex"
+
+[sub_resource type="Resource" id="Resource_lkhet"]
+resource_name = "basic selfbow"
+script = ExtResource("1_corsb")
+name = "Basic Selfbow"
+icon = SubResource("CompressedTexture2D_30kgc")
+item_type = null
+metadata/_custom_type_script = "uid://byhnrhmcgdvhr"
+
+[resource]
+script = ExtResource("2_iq0je")
+id = 2
+title = "Weekly Order"
+description = "A small order requiring 5 items, must be completed within a week."
+time_limit_days = 7
+requirements = Array[ExtResource("1_corsb")]([SubResource("Resource_yjoji"), SubResource("Resource_0wk22"), SubResource("Resource_woceo"), SubResource("Resource_cte3a"), SubResource("Resource_lkhet")])
+reward_gold = 300
+metadata/_custom_type_script = "uid://d0w723y4k1g07"

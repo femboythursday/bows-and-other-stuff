@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bcq8on4a6geuk"]
+
+[ext_resource type="Script" uid="uid://bynhe4obwoh5x" path="res://scripts/quests/quest_box.gd" id="1_jp04b"]
+[ext_resource type="Theme" uid="uid://owlope6d6lhf" path="res://resources/themes_tilesets/time_theme.tres" id="2_61l11"]
+[ext_resource type="Script" uid="uid://d0w723y4k1g07" path="res://scripts/quests/quest.gd" id="2_h6wst"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61l11"]
+bg_color = Color(0.64399135, 0.52230227, 0.88122106, 1)
+
+[sub_resource type="Resource" id="Resource_1g7gy"]
+script = ExtResource("2_h6wst")
+metadata/_custom_type_script = "uid://d0w723y4k1g07"
+
+[node name="QuestBox" type="PanelContainer" unique_id=94680502]
+offset_right = 79.0
+offset_bottom = 26.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_61l11")
+script = ExtResource("1_jp04b")
+quest = SubResource("Resource_1g7gy")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=320597460]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1774017638]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="QuestTitle" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2010827256]
+layout_mode = 2
+theme = ExtResource("2_61l11")
+theme_override_font_sizes/font_size = 16
+text = "I need a bow!"
+
+[node name="QuestDescription" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1432621897]
+layout_mode = 2
+theme = ExtResource("2_61l11")
+theme_override_colors/font_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 8
+text = "NAME requests a Basic Selfbow 
+for xyz."

@@ -4,7 +4,6 @@ class_name Workbench
 var is_interactable: bool = false
 
 func _on_body_entered(body: CharacterBody2D) -> void:
-	## TODO: make you press E
 	if body is Player:
 		is_interactable = true
 

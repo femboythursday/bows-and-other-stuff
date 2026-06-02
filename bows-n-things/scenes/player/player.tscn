@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://cvhfn1qgj5mqf"]
 
-[ext_resource type="Texture2D" uid="uid://b51xq3aqw7j6y" path="res://assets/sivan_spritesheet_v1.5.png" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://cf4pg6meu1mbj" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Resource" uid="uid://dorqxq68jnyfd" path="res://Resources/inventories/player_inventory.tres" id="2_tuyoq"]
-[ext_resource type="Script" uid="uid://c5ceil810n4j3" path="res://scripts/state_machine/node_state_machine.gd" id="3_dqkch"]
-[ext_resource type="PackedScene" uid="uid://b0pdxgdpybxlh" path="res://scenes/inventory/inventory.tscn" id="4_fjrip"]
-[ext_resource type="Script" uid="uid://cv7j6k5fnc4ka" path="res://scripts/state_machine/idle_state.gd" id="4_qlg0r"]
-[ext_resource type="Script" uid="uid://csufyujuo60yf" path="res://scripts/state_machine/walk_state.gd" id="5_qlg0r"]
-[ext_resource type="PackedScene" uid="uid://c3eqmwuwvrsv4" path="res://scenes/crafting/crafting_ui.tscn" id="8_smehm"]
+[ext_resource type="Script" uid="uid://cf4pg6meu1mbj" path="res://scripts/player/player.gd" id="1_qek5x"]
+[ext_resource type="Resource" uid="uid://dorqxq68jnyfd" path="res://resources/inventories/player_inventory.tres" id="2_5gtgg"]
+[ext_resource type="Texture2D" uid="uid://b51xq3aqw7j6y" path="res://assets/sivan_spritesheet_v1.5.png" id="3_h17s1"]
+[ext_resource type="PackedScene" uid="uid://b0pdxgdpybxlh" path="res://scenes/inventory/inventory.tscn" id="4_je7p5"]
+[ext_resource type="PackedScene" uid="uid://dqnkle11clpyl" path="res://scenes/gui/time_display.tscn" id="5_5gtgg"]
+[ext_resource type="Script" uid="uid://c5ceil810n4j3" path="res://scripts/state_machine/node_state_machine.gd" id="5_fm80t"]
+[ext_resource type="Script" uid="uid://cv7j6k5fnc4ka" path="res://scripts/state_machine/idle_state.gd" id="6_gx1jg"]
+[ext_resource type="PackedScene" uid="uid://o6intiljbr0m" path="res://scenes/quests/quest_board_ui.tscn" id="6_h17s1"]
+[ext_resource type="Script" uid="uid://csufyujuo60yf" path="res://scripts/state_machine/walk_state.gd" id="7_ugbui"]
+[ext_resource type="PackedScene" uid="uid://c3eqmwuwvrsv4" path="res://scenes/crafting/crafting_ui.tscn" id="8_fcs02"]
+[ext_resource type="PackedScene" uid="uid://d4irl44x0cvio" path="res://scenes/quests/quest_container.tscn" id="11_je7p5"]
 
 [sub_resource type="Animation" id="Animation_g2els"]
 length = 0.001
@@ -185,18 +188,18 @@ _data = {
 size = Vector2(12, 10)
 
 [node name="Player" type="CharacterBody2D" unique_id=891874451]
-z_index = 1
+z_index = 2
 z_as_relative = false
 y_sort_enabled = true
 collision_layer = 4
 collision_mask = 3
-script = ExtResource("1_g2els")
-inventory = ExtResource("2_tuyoq")
+script = ExtResource("1_qek5x")
+inventory = ExtResource("2_5gtgg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1472437925]
 texture_filter = 1
 position = Vector2(0, -16)
-texture = ExtResource("1_3vyb7")
+texture = ExtResource("3_h17s1")
 hframes = 4
 vframes = 8
 frame = 16
@@ -212,25 +215,50 @@ shape = SubResource("RectangleShape2D_3v2ag")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2021551684]
 zoom = Vector2(1.5, 1.5)
 
-[node name="InventoryUI" parent="Camera2D" unique_id=2073854536 instance=ExtResource("4_fjrip")]
-offset_top = 57.0
-offset_bottom = 85.0
+[node name="InventoryUI" parent="Camera2D" unique_id=2073854536 instance=ExtResource("4_je7p5")]
+z_as_relative = false
+y_sort_enabled = true
+offset_top = 95.0
+offset_bottom = 123.0
+
+[node name="TimeDisplay" parent="Camera2D" unique_id=1195994800 instance=ExtResource("5_5gtgg")]
+z_index = 5
+z_as_relative = false
+y_sort_enabled = true
+offset_left = 173.0
+offset_top = -123.0
+offset_right = 210.0
+offset_bottom = -96.0
 
 [node name="StateMachine" type="Node" parent="." unique_id=1924153995 node_paths=PackedStringArray("initial_node_state")]
-script = ExtResource("3_dqkch")
+script = ExtResource("5_fm80t")
 initial_node_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=1294057552]
-script = ExtResource("4_qlg0r")
+script = ExtResource("6_gx1jg")
 
 [node name="Walk" type="Node" parent="StateMachine" unique_id=268310153]
-script = ExtResource("5_qlg0r")
+script = ExtResource("7_ugbui")
 
-[node name="CraftingUI" parent="." unique_id=432970399 instance=ExtResource("8_smehm")]
+[node name="CraftingUI" parent="." unique_id=432970399 instance=ExtResource("8_fcs02")]
 visible = false
 offset_left = -127.0
 offset_top = -87.0
 offset_right = 297.0
 offset_bottom = 154.0
 scale = Vector2(0.6, 0.6)
-player_inv = ExtResource("2_tuyoq")
+player_inv = ExtResource("2_5gtgg")
+
+[node name="QuestBoardUI" parent="." unique_id=1615386399 instance=ExtResource("6_h17s1")]
+visible = false
+offset_left = -156.0
+offset_top = -84.0
+offset_right = 158.0
+offset_bottom = 86.0
+
+[node name="QuestContainer" parent="." unique_id=1821955302 instance=ExtResource("11_je7p5")]
+offset_left = -211.0
+offset_top = -125.0
+offset_right = -62.0
+offset_bottom = -82.0
+scale = Vector2(0.5, 0.5)

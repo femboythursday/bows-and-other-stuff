@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cmdt2pgs8ox3l"]
+
+[ext_resource type="Theme" uid="uid://xljef71yn2pm" path="res://resources/themes_tilesets/crafting_theme.tres" id="1_msdjg"]
+[ext_resource type="Script" uid="uid://38n13scakm4x" path="res://scripts/quests/quest_board.gd" id="2_1fmk2"]
+[ext_resource type="Script" uid="uid://d0w723y4k1g07" path="res://scripts/quests/quest.gd" id="2_i5h2o"]
+[ext_resource type="Resource" uid="uid://c8smsdomkwy8r" path="res://resources/quests/daily_quest.tres" id="3_t3be2"]
+[ext_resource type="Resource" uid="uid://c0takg2pirtc4" path="res://resources/quests/weekly_quest.tres" id="4_d4dbx"]
+[ext_resource type="Resource" uid="uid://dlvo7d85bm1ec" path="res://resources/quests/quest_3.tres" id="5_2skwa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8xhf"]
+
+[node name="QuestBoard" type="Area2D" unique_id=1862343598]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("2_1fmk2")
+quests = Array[ExtResource("2_i5h2o")]([ExtResource("3_t3be2"), ExtResource("4_d4dbx"), ExtResource("5_2skwa")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1980594880]
+shape = SubResource("RectangleShape2D_h8xhf")
+
+[node name="InstructionLabel" type="Label" parent="." unique_id=222580915]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -48.0
+offset_right = 26.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_msdjg")
+theme_override_font_sizes/font_size = 4
+text = "Press E to get order"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

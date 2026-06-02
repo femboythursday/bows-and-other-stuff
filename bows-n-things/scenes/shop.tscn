@@ -1,14 +1,15 @@
 [gd_scene format=4 uid="uid://bpnc12xd0oldu"]
 
-[ext_resource type="TileSet" uid="uid://dcyrqm225iw4k" path="res://tile_set.tres" id="1_lx5au"]
-[ext_resource type="PackedScene" uid="uid://cvhfn1qgj5mqf" path="res://scenes/player.tscn" id="2_xfvoa"]
+[ext_resource type="TileSet" uid="uid://dcyrqm225iw4k" path="res://resources/themes_tilesets/tile_set.tres" id="1_lx5au"]
 [ext_resource type="PackedScene" uid="uid://fhsxhhcf10h1" path="res://scenes/crafting/workbench.tscn" id="3_1l46r"]
 [ext_resource type="PackedScene" uid="uid://bovnwbi44jsxc" path="res://scenes/inventory/material_stock.tscn" id="5_8r1wq"]
 [ext_resource type="Texture2D" uid="uid://v41jwo7x80kr" path="res://assets/crafting/fb252.png" id="5_ajxib"]
 [ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="6_y6sft"]
 [ext_resource type="Texture2D" uid="uid://dl6oub7s6aido" path="res://assets/crafting/fb1499.png" id="7_m4ofw"]
 [ext_resource type="PackedScene" uid="uid://duofm2txvowhk" path="res://scenes/crafting/material_crate.tscn" id="8_y6sft"]
-[ext_resource type="Resource" uid="uid://bqyt32qepgu8h" path="res://Resources/items/wood.tres" id="9_m4ofw"]
+[ext_resource type="PackedScene" uid="uid://b03mv55ej1m5c" path="res://scenes/player/player_spawn.tscn" id="9_heatd"]
+[ext_resource type="Resource" uid="uid://bqyt32qepgu8h" path="res://resources/items/wood.tres" id="9_m4ofw"]
+[ext_resource type="PackedScene" uid="uid://cmdt2pgs8ox3l" path="res://scenes/quests/quest_board.tscn" id="10_heatd"]
 
 [sub_resource type="Resource" id="Resource_heatd"]
 resource_name = "wood"
@@ -61,9 +62,6 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAAMAPb/AAATAAIAAAARAPb/AAATAAAAAAAQAPb/AAATAAAAAAAWAPX/AAATAAcAAAAYAPX/AAATAAcAAAAaAPX/AAATAAcAAAANAPX/AAAMAAQAAAANAPb/AAAMAAUAAAANAPf/AAAMAAYAAAAOAPX/AAANAAQAAAAOAPb/AAANAAUAAAAOAPf/AAANAAYAAAAPAPX/AAAOAAQAAAAPAPb/AAAOAAUAAAAPAPf/AAAOAAYAAAA=")
 tile_set = ExtResource("1_lx5au")
 
-[node name="Player" parent="." unique_id=891874451 instance=ExtResource("2_xfvoa")]
-position = Vector2(230, -98)
-
 [node name="Workbench" parent="." unique_id=338832564 instance=ExtResource("3_1l46r")]
 position = Vector2(232, -152)
 
@@ -78,3 +76,9 @@ item = SubResource("Resource_1v8qu")
 [node name="WoodCrate" parent="." unique_id=49160314 instance=ExtResource("8_y6sft")]
 position = Vector2(200, -144)
 item = ExtResource("9_m4ofw")
+
+[node name="PlayerSpawn" parent="." unique_id=920644245 instance=ExtResource("9_heatd")]
+position = Vector2(87, -124)
+
+[node name="QuestBoard" parent="." unique_id=1862343598 instance=ExtResource("10_heatd")]
+position = Vector2(56, -142)

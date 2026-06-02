@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dqnkle11clpyl"]
+
+[ext_resource type="Theme" uid="uid://owlope6d6lhf" path="res://resources/themes_tilesets/time_theme.tres" id="1_rxukg"]
+[ext_resource type="Script" uid="uid://b4gm0xdl1neu8" path="res://scripts/time/time_system.gd" id="2_ugu4r"]
+[ext_resource type="Script" uid="uid://dnc0mxw517e8s" path="res://scripts/time/date_time.gd" id="3_dbm4m"]
+
+[sub_resource type="Resource" id="Resource_kj4sh"]
+script = ExtResource("3_dbm4m")
+hours = 22
+days = 1
+metadata/_custom_type_script = "uid://dnc0mxw517e8s"
+
+[node name="TimeDisplay" type="PanelContainer" unique_id=1195994800]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -37.0
+offset_bottom = 27.0
+grow_horizontal = 0
+theme = ExtResource("1_rxukg")
+script = ExtResource("2_ugu4r")
+date_time = SubResource("Resource_kj4sh")
+ticks_per_second = 800
+
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=988546468]
+layout_mode = 2
+
+[node name="DayLabel" type="Label" parent="HBoxContainer" unique_id=387996322]
+layout_mode = 2
+text = "Day 99"
+horizontal_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="HBoxContainer" unique_id=706281091]
+visible = false
+layout_mode = 2
+text = "23:41"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer" unique_id=168055733]
+layout_mode = 2
+theme = ExtResource("1_rxukg")
+alignment = 1
+
+[node name="HourLabel" type="Label" parent="HBoxContainer/HBoxContainer" unique_id=1066073737]
+layout_mode = 2
+text = "23"
+horizontal_alignment = 1
+
+[node name="Colon" type="Label" parent="HBoxContainer/HBoxContainer" unique_id=2055603411]
+layout_mode = 2
+text = ":"
+horizontal_alignment = 1
+
+[node name="MinuteLabel" type="Label" parent="HBoxContainer/HBoxContainer" unique_id=1631573783]
+layout_mode = 2
+text = "41"
+horizontal_alignment = 1

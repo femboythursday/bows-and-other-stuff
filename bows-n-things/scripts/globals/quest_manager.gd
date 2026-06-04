@@ -2,7 +2,7 @@ extends Node
 
 signal quest_updated
 
-var inventory := preload("res://resources/inventories/player_inventory.tres")
+var inventory := preload("res://resources/inventories/player_inv.tres")
 var active_quests: Array[Quest]
 
 enum QUEST_TYPE {

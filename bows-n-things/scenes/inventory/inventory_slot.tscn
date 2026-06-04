@@ -4,6 +4,36 @@
 [ext_resource type="Theme" uid="uid://bg4stgfm53oor" path="res://resources/themes_tilesets/inventory_theme.tres" id="1_u6pog"]
 [ext_resource type="Script" uid="uid://b6ricpnntfkf8" path="res://scripts/inventory/inventory_slot_ui.gd" id="2_c7w7p"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c7w7p"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p2e8g"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_td8r7"]
+atlas = SubResource("CompressedTexture2D_p2e8g")
+region = Rect2(64, 384, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c00wg"]
+texture = SubResource("AtlasTexture_td8r7")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c7w7p"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uvgv"]
+atlas = SubResource("CompressedTexture2D_c7w7p")
+region = Rect2(64, 384, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_td8r7"]
+texture = SubResource("AtlasTexture_0uvgv")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
 [node name="InventorySlot" type="Button" unique_id=709244594]
 custom_minimum_size = Vector2(20, 20)
 offset_right = 20.0
@@ -45,5 +75,16 @@ theme = ExtResource("1_u6pog")
 text = "Basic Selfbow [Unstrung]"
 horizontal_alignment = 1
 
+[node name="Hover" type="Button" parent="." unique_id=1641231002]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c7w7p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c00wg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_td8r7")
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="focus_entered" from="Hover" to="." method="_on_hover_focus_entered"]
+[connection signal="mouse_entered" from="Hover" to="." method="_on_hover_mouse_entered"]
+[connection signal="mouse_exited" from="Hover" to="." method="_on_hover_mouse_exited"]

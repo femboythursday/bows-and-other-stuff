@@ -18,7 +18,8 @@ var current_save: Dictionary = {
 }
 
 func save_game() -> void:
-	update_data()
+	update_player_data()
+	update_item_data()
 	var file := FileAccess.open(SAVE_PATH + "save.sav", FileAccess.WRITE)
 	var save_json := JSON.stringify(current_save)
 	file.store_line(save_json)
@@ -35,7 +36,10 @@ func load_game() -> void:
 	
 	print("game loaded")
 
-func update_data() -> void:
-	var p: Player = Autoload.player_node
+func update_player_data() -> void:
+	var p: Player = PlayerManager.player
 	current_save.player.pos_x = p.global_position.x
 	current_save.player.pos_y = p.global_position.y
+
+func update_item_data() -> void:
+	current_save.items = PlayerManager.INVENTORY.get_save_data()

@@ -1,6 +1,9 @@
 extends Node
 
+signal inventory_updated
+
 const PLAYER = preload("res://scenes/player/player.tscn")
+const INVENTORY: InvData = preload("res://resources/inventories/player_inv.tres")
 
 var player: Player
 var player_spawned := false

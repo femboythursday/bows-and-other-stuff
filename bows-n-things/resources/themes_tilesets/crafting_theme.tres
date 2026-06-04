@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bq82jj78sh5xk" path="res://assets/ui/TravelBook_Spritesheet_v1.png" id="1_hf5pd"]
 [ext_resource type="FontFile" uid="uid://crupvxljx1n7i" path="res://assets/ui/VCR_OSD_MONO_1.001.ttf" id="2_6lv1b"]
+[ext_resource type="FontFile" uid="uid://csmmpuh84gvm2" path="res://assets/ui/ari-w9500.ttf" id="3_uchnd"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a3avu"]
 load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
@@ -91,14 +92,15 @@ Button/styles/hover = SubResource("StyleBoxTexture_8qcoy")
 Button/styles/normal = SubResource("StyleBoxTexture_psqgn")
 Button/styles/pressed = SubResource("StyleBoxTexture_6o7ld")
 Label/constants/outline_size = 4
-Label/fonts/font = ExtResource("2_6lv1b")
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("3_uchnd")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_fnpwn")
 Tree/colors/font_color = Color(0.24115604, 0.24115604, 0.24115604, 1)
 Tree/colors/font_hovered_color = Color(0.43771297, 0.43266988, 0.44567043, 1)
 Tree/constants/button_margin = 32
 Tree/constants/icon_max_width = 16
 Tree/constants/item_margin = 0
-Tree/font_sizes/font_size = 6
+Tree/font_sizes/font_size = 8
 Tree/fonts/font = ExtResource("2_6lv1b")
 Tree/styles/hovered = SubResource("StyleBoxTexture_a3avu")
 Tree/styles/hovered_selected = SubResource("StyleBoxTexture_iilqe")

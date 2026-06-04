@@ -2,12 +2,40 @@
 
 [ext_resource type="Texture2D" uid="uid://bq82jj78sh5xk" path="res://assets/ui/TravelBook_Spritesheet_v1.png" id="1_eslsv"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p2e8g"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnyvk"]
+atlas = SubResource("CompressedTexture2D_p2e8g")
+region = Rect2(64, 320, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6l04q"]
+texture = SubResource("AtlasTexture_mnyvk")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_el5y6"]
 atlas = ExtResource("1_eslsv")
 region = Rect2(64, 320, 32, 32)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tvok8"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg0a1"]
 texture = SubResource("AtlasTexture_el5y6")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u12eb"]
+load_path = "res://.godot/imported/TravelBook_Spritesheet_v1.png-19c4e59b5c05610cd48d53e5217bbf88.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wucvb"]
+atlas = SubResource("CompressedTexture2D_u12eb")
+region = Rect2(64, 288, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvaek"]
+texture = SubResource("AtlasTexture_wucvb")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -25,7 +53,9 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 
 [resource]
-Button/styles/normal = SubResource("StyleBoxTexture_tvok8")
+Button/styles/hover = SubResource("StyleBoxTexture_6l04q")
+Button/styles/normal = SubResource("StyleBoxTexture_gg0a1")
+Button/styles/pressed = SubResource("StyleBoxTexture_nvaek")
 GridContainer/constants/h_separation = -1
 Label/font_sizes/font_size = 4
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_el5y6")

@@ -3,7 +3,7 @@ class_name CraftingUI
 
 @export var design_array: Array[ItemDesign]
 @export var design_material_array: Array[ItemData]
-@export var player_inv: Inventory
+@export var player_inv: InvData
 
 @onready var tree: Tree = $MarginContainer/HBoxContainer/PanelContainer/VBoxContainer/Tree
 @onready var title_label: Label = $MarginContainer/HBoxContainer/VBoxContainer/TitleLabel
@@ -60,10 +60,10 @@ func build_design_material_window(selected_design: ItemDesign) -> void:
 	
 	#print("Player needs: ",selected_design.design_material_array)
 	#print("Player has: ",player_inv.slots)
-	if player_inv.slots.has(selected_design.design_material_array):
-		print("gay")
-	else:
-		print("not gay")
+	#if player_inv.slots.has(selected_design.design_material_array):
+		#print("gay")
+	#else:
+		#print("not gay")
 	#check_design_craftable()
 
 func check_design_craftable() -> void:

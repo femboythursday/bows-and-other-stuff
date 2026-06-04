@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cvhfn1qgj5mqf"]
 
 [ext_resource type="Script" uid="uid://cf4pg6meu1mbj" path="res://scripts/player/player.gd" id="1_qek5x"]
-[ext_resource type="Resource" uid="uid://dorqxq68jnyfd" path="res://resources/inventories/player_inventory.tres" id="2_5gtgg"]
 [ext_resource type="Texture2D" uid="uid://b51xq3aqw7j6y" path="res://assets/sivan_spritesheet_v1.5.png" id="3_h17s1"]
 [ext_resource type="PackedScene" uid="uid://b0pdxgdpybxlh" path="res://scenes/inventory/inventory.tscn" id="4_je7p5"]
 [ext_resource type="PackedScene" uid="uid://dqnkle11clpyl" path="res://scenes/gui/time_display.tscn" id="5_5gtgg"]
@@ -10,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://o6intiljbr0m" path="res://scenes/quests/quest_board_ui.tscn" id="6_h17s1"]
 [ext_resource type="Script" uid="uid://csufyujuo60yf" path="res://scripts/state_machine/walk_state.gd" id="7_ugbui"]
 [ext_resource type="PackedScene" uid="uid://c3eqmwuwvrsv4" path="res://scenes/crafting/crafting_ui.tscn" id="8_fcs02"]
+[ext_resource type="Resource" uid="uid://daw6xa8crnk6r" path="res://resources/inventories/player_inv.tres" id="9_je7p5"]
 [ext_resource type="PackedScene" uid="uid://d4irl44x0cvio" path="res://scenes/quests/quest_container.tscn" id="11_je7p5"]
 
 [sub_resource type="Animation" id="Animation_g2els"]
@@ -194,7 +194,6 @@ y_sort_enabled = true
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_qek5x")
-inventory = ExtResource("2_5gtgg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1472437925]
 texture_filter = 1
@@ -247,7 +246,7 @@ offset_top = -87.0
 offset_right = 297.0
 offset_bottom = 154.0
 scale = Vector2(0.6, 0.6)
-player_inv = ExtResource("2_5gtgg")
+player_inv = ExtResource("9_je7p5")
 
 [node name="QuestBoardUI" parent="." unique_id=1615386399 instance=ExtResource("6_h17s1")]
 visible = false

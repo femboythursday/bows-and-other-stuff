@@ -16,7 +16,6 @@ resource_name = "wood"
 script = ExtResource("6_y6sft")
 name = "Wood"
 icon = ExtResource("5_ajxib")
-item_type = 1
 metadata/_custom_type_script = "uid://byhnrhmcgdvhr"
 
 [sub_resource type="Resource" id="Resource_1v8qu"]
@@ -24,7 +23,6 @@ resource_name = "flax twine"
 script = ExtResource("6_y6sft")
 name = "Flax Twine"
 icon = ExtResource("7_m4ofw")
-item_type = null
 metadata/_custom_type_script = "uid://byhnrhmcgdvhr"
 
 [node name="ShopInside" type="Node2D" unique_id=1640753890]
@@ -77,8 +75,8 @@ item = SubResource("Resource_1v8qu")
 position = Vector2(200, -144)
 item = ExtResource("9_m4ofw")
 
-[node name="PlayerSpawn" parent="." unique_id=920644245 instance=ExtResource("9_heatd")]
-position = Vector2(87, -124)
-
 [node name="QuestBoard" parent="." unique_id=1862343598 instance=ExtResource("10_heatd")]
 position = Vector2(56, -142)
+
+[node name="PlayerSpawn" parent="." unique_id=920644245 instance=ExtResource("9_heatd")]
+position = Vector2(389, -115)

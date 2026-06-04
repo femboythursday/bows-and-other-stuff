@@ -8,4 +8,6 @@ resource_name = "basic selfbow"
 script = ExtResource("2_kh1d1")
 name = "Basic Selfbow"
 icon = ExtResource("1_kh1d1")
+item_type = 0
+amount = 1
 metadata/_custom_type_script = "uid://byhnrhmcgdvhr"

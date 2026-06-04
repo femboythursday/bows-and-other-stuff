@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://7be8sw33cx4i"]
+
+[ext_resource type="Texture2D" uid="uid://cu0o40g1fye5q" path="res://icon.svg" id="1_nqoyy"]
+[ext_resource type="Script" uid="uid://byhnrhmcgdvhr" path="res://scripts/inventory/item_data.gd" id="1_tjd81"]
+
+[resource]
+script = ExtResource("1_tjd81")
+name = "gay"
+icon = ExtResource("1_nqoyy")
+item_type = 1
+metadata/_custom_type_script = "uid://byhnrhmcgdvhr"

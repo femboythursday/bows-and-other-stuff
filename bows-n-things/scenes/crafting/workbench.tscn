@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dgln87byqx8jy" path="res://scripts/crafting/workbench.gd" id="1_mt5gl"]
 [ext_resource type="Texture2D" uid="uid://be437n1keu1gs" path="res://assets/atlas_16x.png" id="1_qfxdc"]
+[ext_resource type="Theme" uid="uid://xljef71yn2pm" path="res://resources/themes_tilesets/crafting_theme.tres" id="3_ojnj7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mt5gl"]
-size = Vector2(42, 34)
+size = Vector2(36, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ojnj7"]
 atlas = ExtResource("1_qfxdc")
@@ -16,12 +17,25 @@ collision_mask = 4
 script = ExtResource("1_mt5gl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1512097227]
-position = Vector2(-1, 7)
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_mt5gl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1292471483]
 texture_filter = 1
 texture = SubResource("AtlasTexture_ojnj7")
+
+[node name="InstructionLabel" type="Label" parent="." unique_id=287396227]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_top = -31.0
+offset_right = 26.0
+offset_bottom = -27.0
+grow_horizontal = 2
+theme = ExtResource("3_ojnj7")
+text = "Press E to craft"
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

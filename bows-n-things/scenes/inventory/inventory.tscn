@@ -3,80 +3,7 @@
 [ext_resource type="Theme" uid="uid://bg4stgfm53oor" path="res://resources/themes_tilesets/inventory_theme.tres" id="1_4axmw"]
 [ext_resource type="PackedScene" uid="uid://d3by15kks6mww" path="res://scenes/inventory/inventory_slot.tscn" id="2_4axmw"]
 [ext_resource type="Script" uid="uid://bnigtsjediec1" path="res://scripts/inventory/inv_ui.gd" id="2_el5y6"]
-
-[sub_resource type="GDScript" id="GDScript_el5y6"]
-script/source = "extends GridContainer
-class_name InventoryUI
-
-@onready var slots = get_children()
-signal index(i: int)
-
-var current_index: int:
-	set(value):
-		current_index = value
-		reset_focus()
-		set_focus()
-
-func _ready() -> void:
-	current_index = 0
-
-func reset_focus() -> void:
-	for slot in slots:
-		slot.set_process_input(false)
-
-func set_focus() -> void:
-	get_child(current_index).grab_focus()
-	get_child(current_index).set_process_input(true)
-	index.emit(current_index)
-
-func _input(event) -> void:
-	if event.is_action_pressed(\"scroll_down\"):
-		if current_index == get_child_count() - 1:
-			current_index = 0
-		else:
-			current_index += 1
- 
-	if event.is_action_pressed(\"scroll_up\"):
-		if current_index == 0:
-			current_index = get_child_count() - 1
-		else:
-			current_index -= 1
-
-func add_item(stats) -> void:
-	for slot in slots:
-		if slot.stats == null:
-			slot.stats = stats
-			return
-
-#const INVENTORY_SLOT = preload(\"res://scenes/inventory/inventory_slot.tscn\")
-#
-#@export var data: InventoryData
-#
-#func _ready() -> void:
-	#clear_inventory()
-	#update_inventory()
-	#data.changed.connect(on_inventory_changed)
-#
-#func _process(delta: float) -> void:
-	#update_inventory()
-#
-#func clear_inventory() -> void:
-	#for child in get_children():
-		#child.queue_free()
-#
-#func update_inventory(i: int = 0) -> void:
-	#for slot in data.slots:
-		#var new_slot = INVENTORY_SLOT.instantiate()
-		#add_child(new_slot)
-		#new_slot.slot_data = slot
-	#await get_tree().process_frame
-	#get_child(i).grab_focus()
-#
-#func on_inventory_changed() -> void:
-	##var i = focus_index
-	#clear_inventory()
-	#update_inventory()
-"
+[ext_resource type="Resource" uid="uid://daw6xa8crnk6r" path="res://resources/inventories/player_inv.tres" id="3_tvok8"]
 
 [node name="InventoryUI" type="PanelContainer" unique_id=2073854536]
 z_index = 5
@@ -93,7 +20,6 @@ offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_4axmw")
-script = ExtResource("2_el5y6")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=424378131]
 layout_mode = 2
@@ -101,7 +27,8 @@ layout_mode = 2
 [node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=1583815243]
 layout_mode = 2
 columns = 9
-script = SubResource("GDScript_el5y6")
+script = ExtResource("2_el5y6")
+data = ExtResource("3_tvok8")
 
 [node name="InventorySlot" parent="MarginContainer/GridContainer" unique_id=709244594 instance=ExtResource("2_4axmw")]
 layout_mode = 2

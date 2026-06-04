@@ -8,4 +8,5 @@ resource_name = "flax twine"
 script = ExtResource("2_pn7me")
 name = "Flax Twine"
 icon = ExtResource("1_pn7me")
+item_type = 1
 metadata/_custom_type_script = "uid://byhnrhmcgdvhr"

@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Autoload="*uid://b63k08mx4n4kg"
 SaveManager="*uid://dc53t7txv8nno"
 PlayerManager="*uid://e5v2lus8y7xh"
 SceneManager="*uid://ti0jnsscnaqs"
